@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="project DevLinks" src=".github/focusTime02.png" width="100%">
+  <img alt="project DevLinks" src=".github/focusTime02.png" width="40%">
 </p>
 
 ## 🚀 Technologies
