@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-body: 'Roboto', sans-serif;
+
+  --base-color: 240; 
+  --bg-color: hsl(0, 0%, 100%);
+  
+  --primary-cards: hsl(var(--base-color), 9%, 89%);
+  --secundary-cards: hsl(194, 97%, 31%);
+  
+  --primary-icons: hsl(var(--base-color), 6%, 21%);
+  --secundary-icons: var(--bg-color);
+}
+
+.darkTheme {
+  --bg-color: hsl(var(--base-color), 5%, 7%);
+
+  --primary-cards: hsl(var(--base-color), 6%, 17%);
+  --secundary-cards: hsl(195, 74%, 15%);
+
+  --primary-icons: hsl(var(--base-color), 7%, 78%);
+}
+
+body {
+  background-color: var(--bg-color);
+  display: grid;
+  height: 100vh;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10vw;
+  justify-content: center;
+  padding: 0 3rem;
+  align-self: center;
+}
+
+#timerWrapper {
+  align-self: center;
+  justify-self: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+.timer span {
+  font-family: var(--ff-body);
+  font-size: 12rem;
+  font-weight: 500;
+  color: var(--primary-icons);
+}
+
+#controlsButtons {
+  display: flex;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button svg path {
+  fill: var(--primary-icons);
+}
+
+.sounds {
+  display: grid;
+  grid-template-areas: "A B" "C D";
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.sounds button {
+  background-color: var(--primary-cards);
+  width: 15rem;
+  padding: 4.8rem;
+  border-radius: 2.4rem;
+}
+
+.sounds button:hover,
+.selected button {
+  background-color: var(--secundary-cards);
+}
+
+.sounds button:hover svg path,
+.selected svg path {
+  fill: var(--secundary-icons);
+}
