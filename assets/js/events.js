@@ -1,4 +1,5 @@
 import {
+  darkModeButton,
   playButton,
   pauseButton,
   stopButton,
@@ -11,6 +12,10 @@ import {
 } from "./elements.js";
 
 export function Events({ controls, timer, soundControls, sounds }) {
+
+  darkModeButton.addEventListener("click", function() {
+    controls.darkMode();
+  })
 
   playButton.addEventListener("click", function () {
     controls.play();

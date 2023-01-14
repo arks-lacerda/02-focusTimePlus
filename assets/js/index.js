@@ -1,5 +1,6 @@
 import {
   body,
+  darkModeButton,
   playButton,
   pauseButton,
   forestCard,
@@ -19,6 +20,7 @@ import { Events } from "./events.js";
 const sounds = Sounds();
 
 const controls = Controls({
+  darkModeButton,
   playButton,
   pauseButton,
   body,

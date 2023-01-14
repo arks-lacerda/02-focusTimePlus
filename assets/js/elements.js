@@ -1,5 +1,7 @@
 const body = document.body;
 
+const darkModeButton = document.querySelector(".darkMode");
+
 const playButton = document.querySelector(".play");
 const pauseButton = document.querySelector(".pause");
 const stopButton = document.querySelector(".stop");
@@ -22,6 +24,7 @@ const secondsDisplay = document.querySelector(".seconds");
 
 export  {
   body,
+  darkModeButton,
   playButton,
   pauseButton,
   stopButton,

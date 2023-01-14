@@ -5,6 +5,12 @@ export function Controls({
   body,
 }) {
 
+  function darkMode() { 
+    body.classList.toggle("darkTheme");
+    buttonPressAudio.play();
+  }
+
+
   function play() {
     playButton.classList.add("hide");
     pauseButton.classList.remove("hide");
@@ -29,6 +35,7 @@ export function Controls({
 
 
   return {
+    darkMode,
     play,
     pause,
     stop,
