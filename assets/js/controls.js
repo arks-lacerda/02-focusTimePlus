@@ -4,6 +4,7 @@ export function Controls({
   buttonPressAudio,
   body,
 }) {
+
   function play() {
     playButton.classList.add("hide");
     pauseButton.classList.remove("hide");

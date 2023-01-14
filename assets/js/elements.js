@@ -19,6 +19,7 @@ const fireplaceCard = document.querySelector("#fireplace-card");
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
 
+
 export  {
   body,
   playButton,

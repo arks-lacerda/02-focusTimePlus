@@ -16,6 +16,15 @@
   
   --primary-icons: hsl(var(--base-color), 6%, 21%);
   --secundary-icons: var(--bg-color);
+
+  --slider-track: hsl(var(--base-color), 6%, 21%);
+  --slider-thumb: hsl(var(--base-color), 6%, 21%);
+  --switch-button-mode: url(../images/sun.svg);
+
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
 }
 
 .darkTheme {
@@ -25,6 +34,17 @@
   --secundary-cards: hsl(195, 74%, 15%);
 
   --primary-icons: hsl(var(--base-color), 7%, 78%);
+  --secundary-icons: hsl(0, 0%, 100%);
+
+  --slider-track: hsl(var(--base-color), 0%, 100%);
+  --slider-thumb: hsl(var(--base-color), 0%, 100%);
+
+  --switch-button-mode: url(../images/moon-stars.svg);
+
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --highlight-color: rgba(255, 255, 255, 0.1);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
 }
 
 body {
@@ -34,13 +54,64 @@ body {
   align-items: center;
 }
 
+header {
+  align-self: flex-start;
+  justify-self: end;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+
+/*Switch*/
+#switch {
+  position: relative;
+  width: 6.4rem;
+}
+
+#switch button {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: var(--stroke-color) var(--switch-button-mode) no-repeat  center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-dark 0.2s;
+}
+
+.darkTheme #switch button {
+  animation: slide-light 0.2s forwards;
+}
+
+#switch button:hover {
+  outline: 0.2rem solid var(--stroke-color);
+}
+
+#switch span {
+  display: block;
+  width: 6.4rem;
+  height: 2.4rem;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+  border-radius: 9999rem;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: 10vw;
   justify-content: center;
   padding: 0 3rem;
-  align-self: center;
+  align-self: flex-start;
 }
 
 #timerWrapper {
@@ -95,6 +166,41 @@ button svg path {
   border-radius: 2.4rem;
 }
 
+.vControl {
+  position: absolute;
+  left: 2.5rem;
+  bottom: 2rem;
+  width: 10rem;
+}
+
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance:none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--slider-track);
+  height: .6rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--slider-thumb);
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: -.6rem;
+}
+
+.card:hover input[type="range"]::-webkit-slider-thumb,
+.card:hover input[type="range"]::-webkit-slider-runnable-track,
+.selected input[type="range"]::-webkit-slider-thumb,
+.selected input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #fff;
+}
+
 .sounds button:hover,
 .selected button {
   background-color: var(--secundary-cards);
@@ -103,4 +209,22 @@ button svg path {
 .sounds button:hover svg path,
 .selected svg path {
   fill: var(--secundary-icons);
+}
+
+@keyframes slide-light {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-dark {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
