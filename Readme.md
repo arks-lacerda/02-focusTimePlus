@@ -6,11 +6,15 @@
 
 
 <p align="center">
-  <img alt="project DevLinks" src=".github/focusTime.png" width="100%">
+  <img alt="project DevLinks" src=".github/ftimePlusLight.png" width="100%">
+</p>
+<p align="center">
+  <img alt="project DevLinks" src=".github/ftimePlusDark.png" width="100%">
 </p>
 
 <p align="center">
-  <img alt="project DevLinks" src=".github/focusTime02.png" width="40%">
+  <img alt="project DevLinks" src=".github/ftimePlusLightMobile.png" width="40%">
+  <img alt="project DevLinks" src=".github/ftimePlusDarkMobile.png" width="40.5%">
 </p>
 
 ## 🚀 Technologies
@@ -30,6 +34,8 @@ In this project use concepts like:
 * Clean Code.
 * factory.
 * Dependency injection.
+* Mode Dark/Light
+* Track Volume
 
 - [Access the finished project, online](https://arks-lacerda.github.io/02-focusTimePlus/)
 
