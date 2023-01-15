@@ -11,6 +11,11 @@ export function Sounds() {
   rainAudio.loop = true;
   coffeeShopAudio.loop = true;
   fireplaceAudio.loop = true;
+
+  forestAudio.volume = 0.5;
+  rainAudio.volume = 0.5;
+  coffeeShopAudio.volume = 0.5;
+  fireplaceAudio.volume = 0.5;
   
   return {
     forestAudio,

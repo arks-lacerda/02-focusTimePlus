@@ -18,6 +18,11 @@ const rainCard = document.querySelector("#rain-card");
 const coffeeShopCard = document.querySelector("#coffee-shop-card");
 const fireplaceCard = document.querySelector("#fireplace-card");
 
+const vForestRange = document.querySelector("#vMusicForest");
+const vRainRange = document.querySelector("#vMusicRain");
+const vCoffeeShopRange = document.querySelector("#vMusicCoffeeShop");
+const vFireplaceRange = document.querySelector("#vMusicFireplace");
+
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
 
@@ -38,6 +43,10 @@ export  {
   rainCard,
   coffeeShopCard,
   fireplaceCard,
+  vForestRange,
+  vRainRange,
+  vCoffeeShopRange,
+  vFireplaceRange,
   minutesDisplay,
   secondsDisplay,
 }
